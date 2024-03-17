@@ -10,7 +10,20 @@
 </head>
 <body>
     <div class="container">
+        <h1 class="heading">Hyper Todo</h1>
+        <div class="stopwatch">
+            <h1>HYpe The speed</h1>
+            <h1 id="displayTIme">00:00:00</h1>
+            <div class="buttons">
+                <img src="images/stopwatch images/images/stop.png" alt ="" onclick="stopTHeWatch()">
+                <img src="images/stopwatch images/images/start.png" alt="" onclick="startWatch()" >
+                <img src="images/stopwatch images/images/reset.png"  alt="" onclick="resetTHeWatch()">
+            </div>
+        </div>
         <div class="todoapp">
+            <div class="progressBAr">
+                <div class="childBar"></div>
+            </div>
             <h2>Todo LISt <img src="images/icon.png" alt=""></h2>
             <div class="row">
                 <input type="text" id="inputbox" placeholder="Add your todo">
@@ -22,10 +35,22 @@
                 <li>task2</li>
                 <li>task3</li> -->
             </ul>
+            
         </div>
+
     </div>
     <div id="toastbox">
         
+    </div>
+      <!-- note app  -->
+      <div class="contaienr">
+        <h1> <img src=" https://cdn-icons-png.flaticon.com/512/4021/4021693.png" alt="">Hyper Notes</h1>
+      <button class="btn"> <img src="https://p7.hiclipart.com/preview/635/330/558/computer-icons-icon-design-create.jpg" alt="">Create Button</button>
+      <div class="containerNotes">
+        <!-- <p contenteditable="true" class="inputBox">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCGAwQ25D6kwlVPFRWBmHO3xzu2vsprlB82Q&usqp=CAU" alt="">
+        </p> -->
+      </div>
     </div>
 </body>
 </html>

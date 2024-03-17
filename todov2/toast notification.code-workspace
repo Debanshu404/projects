@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../toast notification"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "todov2"
+	}
+}
