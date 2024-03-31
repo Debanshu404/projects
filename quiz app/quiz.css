@@ -1,0 +1,89 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: rgb(0,27,36);
+    background: linear-gradient(90deg, rgba(0,27,36,1) 0%, rgba(51,42,152,1) 46%, rgba(0,212,255,1) 69%);
+    color: #333; /* Updated text color */
+    line-height: 1.6;
+}
+
+.quiz_section {
+    max-width: 700px; /* Increased max-width for better readability */
+    margin: 20px auto;
+    background-color: #cfe1ec;
+    padding: 30px; /* Increased padding for better spacing */
+    border-radius: 10px; /* Increased border-radius for smoother edges */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); /* Increased box shadow for depth */
+}
+
+.quiz {
+    margin-bottom: 30px; /* Increased margin-bottom for better separation */
+}
+
+h2 {
+    font-size: 28px; /* Increased font size for headings */
+    margin-bottom: 20px; /* Increased margin-bottom for better spacing */
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #dee2e6; /* Updated hr color for better contrast */
+    margin: 20px 0; /* Increased margin for better spacing */
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    margin-bottom: 15px; /* Increased margin-bottom for better spacing */
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    display: inline-block;
+    padding: 15px 25px; /* Increased padding for better touch targets */
+    /* background-color: #f1f3f5;  */
+    border: 1px solid #ced4da; /* Updated border color */
+    border-radius: 6px; /* Updated border-radius for smoother edges */
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+label:hover {
+    background-color: #b5daff; /* Updated hover background color */
+}
+
+/* Highlight selected option */
+/* input:checked + label {
+    background-color: #007bff; /* Updated background color for selected */
+    /* color: #fff; /* Updated text color for better contrast */
+    /* border-color: #007bff;  */
+/* }   */
+
+.btn {
+    text-align: center;
+}
+
+button {
+    padding: 15px 25px; /* Increased padding for better touch targets */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px; /* Updated border-radius for smoother edges */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
