@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter</title>
+</head>
+<style>
+    button{
+        background-color: aqua;
+        color: aliceblue;
+        box-sizing: border-box;
+        border-radius: 20%;
+        /* margin: auto; */
+         /* /* display: flex;  */
+         flex-direction: column; 
+    }
+    #main{
+       
+    }
+</style>
+<body>
+    <div id="main">
+        <p id="para"></p>
+    
+    <button id="plus">+</button>
+    <button id="minus">-</button>
+   <div>increment/decrement by: <form action=""type=number value="1"
+    ></form ><input id=forms type="number"></div>
+    <button id="reset">Reset</button>
+</div>
+    <script>
+        const plus=document.querySelector('#plus')
+        const minus=document.querySelector('#minus')
+        const para=document.querySelector('#para')
+        const form=document.querySelector('#forms')
+        const resets = document.querySelector('#reset')
+        
+        let inc=0
+        plus.addEventListener('click',function(){
+            let formValue=parseInt(form.value)
+            
+            
+            inc=inc+formValue
+            console.log(inc)
+            para.innerText=inc
+            
+            
+            
+            
+        })
+        minus.addEventListener('click',function(){
+            if(inc>0){
+                let formValue=parseInt(form.value)
+                inc-=formValue
+}else{
+    alert("negative number is approached time to increase")
+}
+            
+            
+            para.innerText=inc
+        })
+        
+resets.addEventListener('click', function() {
+    // Reset the value to '0'
+    inc=0
+    para.innerText = 0; // Assuming formValue is the element whose value needs to be reset
+});
+    </script>
+</body>
+</html>

@@ -1061,10 +1061,11 @@ function checkBox() {
   }
   if (ansIndex === -1) {
     alert("No option selected!");
-    // currentquiz--
+    currentquiz--
   }
   return ansIndex;
 }
+s
 
 function clearans(){
   answerelement.forEach(function(currentOption){
@@ -1072,6 +1073,9 @@ function clearans(){
   })
 }
 submitbtn.addEventListener('click',function(){
+  answerelement.forEach(function(element){
+    element.nextElementSibling.style.backgroundColor='white'
+  });
   const selctedOption=checkBox()
   // console.log(selctedOption);
   //updating the score
@@ -1090,10 +1094,18 @@ submitbtn.addEventListener('click',function(){
   
 })
 // Styling the click effect and validating answer
-answerelement.forEach(function(element) {
-  element.addEventListener('click', function(element) {
-    const selectedOption = parseInt(event.currentTarget.value); // Get the selected option as an integer
-    const anselem=answerelement[element]
+answerelement.forEach(function(element,index) {
+  element.nextElementSibling.addEventListener('click', function(event) {
+    
+    const selectedOption = index // Get the selected option as an integer
+    console.log(selectedOption)
+    const anselem = event.target
+    // anselem.style.backgroundColor = 'green';
+
+    // console.log(selectedOption);
+    
+    console.log(jsQuestions[currentquiz].correctAnswer);
+   
     if (selectedOption === jsQuestions[currentquiz].correctAnswer) {
       // Correct answer: Change label color to green
       anselem.style.backgroundColor = 'green';
@@ -1101,8 +1113,9 @@ answerelement.forEach(function(element) {
       // Incorrect answer: Change label color to red
       anselem.style.backgroundColor = 'red';
     }
-  },true);
+  });
 });
+
 
 //showing the user their reasult and end the test
 finishbtn.addEventListener('click', function() {
@@ -1145,11 +1158,10 @@ finishbtn.addEventListener('click', function() {
 
 //styling by js
 //styling the click effect
-// answerelement.forEach(function(element){
-//   element.addEventListener('click',function(event){
-//     const label = event.target.parentNode.querySelector('label');
-//     label.style.backgroundColor = 'yellow';
-//     label.style.color = '#333';
-//   })
-// })
-
+answerelement.forEach(function(element){
+  element.addEventListener('click',function(event){
+    
+    event.target.style.backgroundColor = 'yellow';
+    event.target.style.color = '#333';
+  })
+})
